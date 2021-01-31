@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER</title>
+    <!-- bootstrap CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!-- End bootstrap CSS only -->
+    <!-- jQuery -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- end jQuery -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End  JavaScript Bundle with Popper -->
+    <!-- mapbox -->
+    <script
+      src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"
+      defer
+    ></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!--end mapbox -->
+    <!-- personal Css and Js  -->
+    <link rel="stylesheet" href="9.css" />
+    <script src="9.js" defer></script>
+    <!-- End personal Css and Js  -->
+  </head>
+  <body>
+    <!-- nav -->
+    <div
+      class="container-fluid bg-dark d-flex flex-column justify-content-center align-items-center"
+    >
+      <h4 class="text-warning">Weather App</h4>
+      <form class="form w-75 p-2 my-2">
+        <select class="form-control" id="country">
+          <option disabled selected value>Select</option>
+        </select>
+      </form>
+    </div>
+    <!-- end nav -->
+    <!-- section 1 -->
+    <div class="container-fluid p-0 m-0 row w-100">
+      <div
+        class="col-sm-12 col-md-4 bg-secondary text-white border border-white"
+        id="c-info"
+      >
+        <p id="country-name" class="display-6"></p>
+        <p id="native-name" class="text-warning">
+          Native Name :<span class="text-white px-1"></span>
+        </p>
+        <p id="capital" class="text-warning">
+          Capital :<span class="text-white px-1"></span>
+        </p>
+        <p id="region" class="text-warning">
+          Region :<span class="text-white px-1"></span>
+        </p>
+        <p id="population" class="text-warning">
+          population :<span class="text-white px-1"></span>
+        </p>
+        <p id="languages" class="text-warning">
+          Languages :<span class="text-white px-1"></span>
+        </p>
+        <p id="timezone" class="text-warning">
+          TimeZone :<span class="text-white px-1"></span>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-4 bg-warning p-0 border border-white">
+        <h3
+          id="calling-code"
+          class="w-100 py-3 text-white text-center bg-secondary"
+        >
+          CALLING CODE
+        </h3>
+        <p class="text-dark text-center display-1 my-5"></p>
+      </div>
+      <div class="col-sm-12 col-md-4 bg-white p-0 m-0 border border-white">
+        <img id="flag" class="img-fluid w-100 h-100" />
+      </div>
+    </div>
+    <!-- end section 1 -->
+    <!-- section 2 -->
+    <div class="container-fluid p-0 m-0 row w-100">
+      <div class="col-sm-12 col-md-4 bg-white m-0 p-0 border border-white">
+        <h3 class="text-center py-3 bg-secondary text-warning">
+          CAPITAL WEATHER REPORT
+        </h3>
+
+        <img class="rounded mx-auto d-block" id="img-cloudes" src="" alt="" />
+
+        <p class="font-weight-bold display-6 text-warning text-center px-1">
+          <span id="description"></span>
+        </p>
+        <p id class="font-weight-bold px-1">
+          Wind Speed : <span id="wind-speed"></span>
+        </p>
+        <p class="font-weight-bold px-1">
+          Temperature : <span id="temprature"></span>
+        </p>
+        <p class="font-weight-bold px-1">
+          Humidity : <span id="humidity"></span>
+        </p>
+        <p class="font-weight-bold px-1">
+          visibility : <span id="visibility"></span>
+        </p>
+      </div>
+      <div id="map" class="col-sm-12 col-md-8 bg-secondary"></div>
+    </div>
+    <!-- end section 2 -->
+    <!-- footer -->
+
+    <!-- end footer -->
+  </body>
+</html>
